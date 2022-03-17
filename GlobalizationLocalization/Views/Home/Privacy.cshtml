@@ -1,0 +1,8 @@
+﻿@inject GlobalizationLocalization.Services.Abstracts.ISharedResourceService SharedLocalizer
+
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedString("Privacy Policy");
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>@SharedLocalizer.GetLocalizedString("PrivacyContent")</p>

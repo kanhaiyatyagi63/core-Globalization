@@ -1,0 +1,12 @@
+﻿@inject GlobalizationLocalization.Services.Abstracts.ISharedResourceService SharedLocalizer
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedString("Welcome");
+}
+
+<div class="text-center">
+    <h1 class="display-4">@SharedLocalizer.GetLocalizedString("Welcome")</h1>
+    <p>@SharedLocalizer.GetLocalizedString("LearnAbout") <a href="https://docs.microsoft.com/aspnet/core">@SharedLocalizer.GetLocalizedString("About")</a>.</p>
+</div>
